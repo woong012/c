@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void arithmetic_operations(double a, double b) {
+    printf("입력된 수: a = %.2lf, b = %.2lf\n", a, b);
+    printf("덧셈: %.2lf + %.2lf = %.2lf\n", a, b, a + b);
+    printf("뺄셈: %.2lf - %.2lf = %.2lf\n", a, b, a - b);
+    printf("곱셈: %.2lf * %.2lf = %.2lf\n", a, b, a * b);
+    
+    if (b != 0) {
+        printf("나눗셈: %.2lf / %.2lf = %.2lf\n", a, b, a / b);
+    } else {
+        printf("나눗셈: 0으로 나눌 수 없습니다.\n");
+    }
+}
+
+int main() {
+    double num1, num2;
+
+    printf("첫 번째 수를 입력하세요: ");
+    if (scanf("%lf", &num1) != 1) {
+        printf("잘못된 입력입니다.\n");
+        return 1;
+    }
+
+    printf("두 번째 수를 입력하세요: ");
+    if (scanf("%lf", &num2) != 1) {
+        printf("잘못된 입력입니다.\n");
+        return 1;
+    }
+
+    arithmetic_operations(num1, num2);
+
+    return 0;
+}
+
